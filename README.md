@@ -1,2 +1,4 @@
-# buildout.mycarman
-new buildout for my-carman
+walter.buildout
+===============
+
+buildout for My Carman

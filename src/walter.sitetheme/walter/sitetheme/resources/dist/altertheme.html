@@ -1,0 +1,334 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><!--<![endif]-->
+
+<html lang="en">
+  <head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>
+    My Carman - your car we care
+  </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/walter.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="http://localhost:9001bower_components/html5shiv/html5shiv.js"></script>
+    <script src="../bower_components/respond/respond.min.js"></script>
+  <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
+    <div class="navbar navbar-default navbar-fixed-top app-toolbar" id="app-toolbar">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toogle" data-toggle="collapse" data-target=".app-toolbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">My Carman</a>
+      </div>
+      <div class="navbar-collapse collapse app-toolbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Contents</a></li>
+                <li><a href="#about">View</a></li>
+                <li><a href="#contact">Edit</a></li>
+                <li><a href="#contact">Share</a></li>
+                <li><a href="#contact">Content rules</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li id="plone-personal-actions" class="dropdown dropdown-userinfo">
+            <a data-toggle="dropdown" class="dropdown-toogle" href="/author/123456789">
+              <span>John Doe</span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li id="plone-personal-actions-dashboard">
+                <a href="/dashboard">My workspace</a>
+              </li>
+              <li id="plone-personal-actions-preferences">
+                <a href="/preferences">Settings</a>
+              </li>
+              <li id="plone-personal-actions-plone_setup">
+                <a href="/controlpanel">Configuration</a>
+              </li>
+              <li id="plone-personal-actions-logout">
+                <a href="/logout">Signout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Add <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                      <li><a href="#">Folder</a></li>
+                      <li><a href="#">Document</a></li>
+                      <li><a href="#">Image</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-header">Settings</li>
+                      <li><a href="#">Filter options</a></li>
+                      <li><a href="#">Add...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- App master nav -->
+    <nav class="navbar navbar-default app-navbar" id="app-navbar" role="navigation">
+      <!-- Brand and toggle get grounded for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".app-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand visible-xs" href="/">My Carman!</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling
+      <div class="container">
+        <div class="row">
+          <div class="navbar-brand">
+            <div class="center-block"><a class="logo" href="/"></a></div>
+          </div>
+        </div>
+      </div>-->
+      <div class="container">
+        <div><a id="facebook" href="https://www.facebook.com/pages/My-carman/1445243735749911?fref=ts"></a></div>
+      </div>
+      <div class="collapse navbar-collapse app-navbar-collapse">
+      <div class="container logobar">
+        <div class="row">
+          <div class="col-xs-4 col-md-4"></div>
+          <div id="logo" class="col-xs-4 col-md-4">
+          <a href="/"><img class="img-responsive" src="/++theme++walter.sitetheme/img/logobutton_big.png" /></a>        
+          </div>
+          <div class="col-xs-4 col-md-4"></div>
+        </div>
+      </div>
+        <div class="container" id="navigationbar">
+
+          <div class="row" >
+            <div class="col-xs-6 col-md-4 pull-left menu-left">
+              <ul class="nav navbar-nav">
+                <li><a href="/idee" id="idee">IDEE</a></li>
+                <li>
+                <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
+                </li>
+                <li><a href="/special-cars" id="carspecial">SPECIAL CARS</a></li>
+                <li>
+                <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
+                </li>
+                <li><a href="/bestellung" id="neuwagen">BESTELLUNG</a></li>
+              </ul>
+            </div>
+          <!--  <div class="col-xs-6 col-md-4 abstand">
+        <a href="/" id="logo"><img class="image-responsive center-block" src="/++theme++walter.sitetheme/img/logobutton_big.png" /></a> 
+            </div> -->
+            <div class="col-xs-6 col-md-4 pull-right menu-right">
+              <ul class="nav navbar-nav">
+                  <li><a href="/bestand" id="gebraucht">BESTAND</a></li>
+                  <li>
+                <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
+                </li>
+                <li><a href="/werkstatt" id="werkstattnav">WERKSTATT</a></li>
+                <li>
+                <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
+                </li>
+                <li><a href="/kontakt" id="kontaktnav">KONTAKT</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container" id="zacken"></div>
+    </nav>
+  <div class="app-background"></div>
+  <div class="app-brandbar">
+        <div class="container"></div>
+    </div> <!-- /.app-brandbar -->
+  <div class="container" id="zacken-rotate"></div>
+    <div class="container" id="headericon">
+         <img class="center-block" src="/++theme++walter.sitetheme/img/muster.png" />
+    </div>
+      <!--<div class="container pictures">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 pic1"></div>
+        <div class="col-xs-12 col-md-4 pic2"></div>
+        <div class="col-xs-12 col-md-4 pic3"></div>
+      </div>
+    </div> -->
+
+    <div class="app-header">
+      <div class="container">
+
+      </div>
+    </div>  <!-- /.app-header -->
+
+    <div class="container">
+      <div role="main">
+        <main class="app-content-body">
+          <div class="container app-page" id="content">
+            <div class="jumbotron">
+                       <h1>
+                      </h1>
+            </div>
+
+            <div class="app-page-header">
+              <div class="page-header"></div>
+                <h1></h1>
+              </div>
+                        <p class="lead"></p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="app-content">
+      <div class="container" role="main">
+              <div class="row contentline">
+                <div class="col-xs-4 col-md-5 line">
+                </div>
+                <div class="col-xs-12 col-md-2 lineheader">
+                  <h1>Leistungen</h1>
+                </div>
+                <div class="col-xs-4 col-md-5 line">
+                </div>
+            </div>
+                  <div class="row" id="service">
+                <div class="col-xs-12 col-md-4">
+                    <ul class="extra">
+                      <li><a href="/werkstatt#Inspektion">INSPEKTION - REPARATUR</a></li>
+                      <li><a href="/werkstatt#diagnose">DIAGNOSE</a></li>
+                      <li><a href="/werkstatt#karosserie">KAROSSERIE - LACK</a></li>
+                      <li><a href="/werkstatt#huau">HU - AU</a></li>
+                      <li><a href="/werkstatt#klimaservice">KLIMASERVICE</a></li>
+                      <li><a href="/werkstatt#reifen">REIFEN - RÄDER</a></li>
+                      <li><a href="/werkstatt#luftfederung">LUFTFEDERUNG</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                    <ul class="extra">
+                      <li><a href="/werkstatt#autoglas">AUTOGLAS-ZENTRUM</a></li>
+                      <li><a href="/werkstatt#unfallschadenabwicklung">UNFALLSCHADEN-<br>ABWICKLUNG</a></li>
+                      <li><a href="/werkstatt#unfallinstandsetzung">UNFALLINSTANDSETZUNG</a></li>
+                      <li><a href="/werkstatt#fahrzeugtransport">FAHRZEUGTRANSPORT</a></li>
+                      <li><a href="/werkstatt#ankaufvonunfallwagen">ANKAUF VON UNFALLWAGEN</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <ul>
+                      <li><a href="/werkstatt#finanzierung">NEUWAGENFINANZIERUNG</a></li>
+                      <li><a href="/werkstatt#finanzierung">GEBRAUCHTWAGEN-<br>FINANZIERUNG</a></li>
+                      <li><a href="/werkstatt#leasing">LEASING</a></li>
+                      <li><a href="/werkstatt#tuning">TUNING</a></li>
+                      <li><a href="/werkstatt#finanzierung">REPERATURFINANZIERUNG</a></li>
+                      <li><a href="/werkstatt#garantie">GARANTIE</a></li>
+                    </ul>
+                </div>
+            </div>
+      </div> <!-- /.container -->
+    </div> <!-- /.app-content" -->
+     <img id="footerlogo" class="center-block" src="/++theme++walter.sitetheme/img/logo_footer.jpg" />
+     <footer class="app-footer" id="app-footer" role="contentinfo">
+      <div class="container">
+        <div class="row" id="kontakt">
+          <div class="col-xs-12 col-md-4 part"><img src="/++theme++walter.sitetheme/img/map.png" />Hauptstraße 24,<br>86450 Altenmünster</div>
+          <div class="col-xs-12 col-md-4 part"><img src="/++theme++walter.sitetheme/img/telefon.png" />+ 49 82 95 - 12 34</div>
+          <div class="col-xs-12 col-md-4 part"><img src="/++theme++walter.sitetheme/img/email.png" /><a href="mailto:post@my-carman.de">post@my-carman.de</a></div>
+        </div>
+        <div class="row" id="footerline">
+          <div class="col-xs-12 col-md-5 dotline"></div>
+          <div class="col-xs-12 col-md-2 tristar"></div>
+          <div class="col-xs-12 col-md-5 dotline"></div>
+        </div>
+        <div id="footernav" class="center-block">
+          <ul>
+            <li>&copy;2014 Auto S.Walter<li>
+              <li>|</li>
+            <li><a href="/special-cars" rel="nofollow">Special Cars</a><li>
+              <li>|</li>
+            <li><a href="/bestellung" rel="nofollow">Bestellung</a><li>
+              <li>|</li>
+            <li><a href="/bestand" rel="nofollow">Bestand</a><li>
+              <li>|</li>
+            <li><a href="/werkstatt" rel="nofollow">Werkstatt</a></li>
+              <li>|</li>
+            <li><a href="/kontakt" rel="nofollow">Kontakt</a><li>
+              <li>|</li>
+            <li><a href="/impressum" rel="nofollow">Impressum</a><li>
+              <li>|</li>
+            <li><a href="/agb" rel="nofollow">AGB</a><li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+
+      <!-- JS and analytics only. -->
+    <!-- Defered JavaScript Loader
+(see: http://www.feedthebot.com/pagespeed/defer-loading-javascript.html)
+================================================== -->
+<script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "../dist/js/example.js";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
+    <div class="app-js-slot">
+        <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:400,600,700,300:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//tkr.ade25.de/";
+  _paq.push(['setTrackerUrl', u+'piwik.php']);
+  _paq.push(['setSiteId', 113]);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//tkr.ade25.de/piwik.php?idsite=113" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+    </div>
+  </body>
+</html>
