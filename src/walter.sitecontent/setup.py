@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the walter.sitetheme package."""
+"""Installer for the walter.sitecontent package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -10,15 +10,12 @@ import os
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-long_description = \
-    read('README.rst') + \
-    read('docs', 'HISTORY.txt') + \
-    read('docs', 'LICENSE.txt')
+long_description = read('README.rst')
 
 setup(
-    name='walter.sitetheme',
+    name='walter.sitecontent',
     version='1.0.0',
-    description="new buildout for mycarman",
+    description="new sitecotent for mycarman",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -28,16 +25,18 @@ setup(
     keywords='mycarman',
     author='John Doe',
     author_email='john@ade25.de',
-    url='http://pypi.python.org/pypi/walter.buildout',
+    url='http://pypi.python.org/pypi/walter.sitecontent',
     license='BSD',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['walter'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'plone.app.theming',
-        'plone.app.themingplugins',
         'setuptools',
+        'plone.app.dexterity [grok, relations]',
+        'plone.app.relationfield',
+        'plone.namedfile [blobs]',
+        'plone.formwidget.contenttree',
     ],
     extras_require={
         'test': [

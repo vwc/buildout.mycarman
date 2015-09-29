@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="walter.sitecontent">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+
+<section class="container">
+      <article>
+        <div class="page-header">
+          <h1 class="documentFirstHeading"
+            tal:content="context/Title">Title inserted here</h1>
+          <div class="documentDescription"
+          tal:content="context/Description"></div>
+        </div>
+      </article>
+    </section>
+    <section class="container">
+      <div class="row">
+        <aside class="col-xs-12 col-sm-6 col-md-6">
+          <h3>Automarke</h3>
+          <div class="marke"
+            tal:content="context/marke"></div>
+          <h3>Automodel</h3>
+            <div class="model"
+            tal:content="context/model"></div>
+          <h3>Modelvarante</h3>
+            <div class="modelvariante"
+              tal:content="context/modelvariante"></div>
+          <h3>Kraftstoffart</h3>
+            <div class="kraftstoffart"
+              tal:condition="context/kraftstoffart"></div>
+              <ul>
+                <li tal:repeat="item context/kraftstoffart">
+                  <span tal:replace="item" />
+                </li>
+              </ul>
+          <h3>Fahrzeugzustand</h3>
+            <div class="zustand"
+              tal:condition="context/zustand"></div>
+              <ul>
+                <li tal:repeat="item context/zustand">
+                  <span tal:replace="item" />
+                </li>
+              </ul>
+          <h3>Fahrzeug Ausstattung</h3>
+            <div class="ausstattung"
+              tal:condition="context/ausstattung"></div>
+              <ul>
+                <li tal:repeat="item context/ausstattung">
+                  <span tal:replace="item" />
+                </li>
+              </ul>
+        </aside>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <img tal:condition="python:getattr(context, 'photo', None)"
+          tal:attributes="src string:${context/absolute_url}/@@images/photo/preview" />
+            <h3>Fahrzeugdetails</h3>
+            <div class="angebot"
+              tal:content="context/angebots_pdf"></div>
+            <h3>Schadstoffangabe</h3>
+            <div class="schadstoffangabe"
+              tal:content="context/schadstoffangabe"></div>
+        </div>
+      </div>
+    </section>
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>

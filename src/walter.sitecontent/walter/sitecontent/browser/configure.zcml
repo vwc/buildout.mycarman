@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    i18n_domain="walter.sitecontent">
+
+
+  <browser:page
+      for="*"
+      name="carinfo_view"
+      class=".car_info.CarInfo"
+      template="car_info.pt"
+      permission="zope2.View"
+      layer="..interfaces.IWalterSitecontentLayer" />
+</configure>

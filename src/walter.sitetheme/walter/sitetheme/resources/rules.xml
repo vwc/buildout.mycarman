@@ -66,11 +66,23 @@
         <drop css:theme="#app-toolbar"
             css:if-content=".userrole-anonymous" />
 
+        <!--<replace css:theme="#app-toolbar"
+            css:content="#app-toolbar" />-->
+
+        <!-- toolbar -->
+        <replace css:theme="#app-toolbar"
+            css:content="#edit-bar"
+            css:if-not-content=".ajax_load"
+            css:if-content=".userrole-authenticated"/>
+        <!-- CMSUI Editbar replacements 
+        <drop css:theme="#app-toolbar"
+            css:if-content=".userrole-anonymous" />
+
         <replace css:theme="#app-toolbar"
             css:content="#app-toolbar" />
 
         <replace css:theme-children="#personal-tools"
-            css:content-children="#portal-personaltools" />
+            css:content-children="#portal-personaltools" />-->
 
         <!-- Logo (link target) -->
         <copy attributes="href" css:content="#portal-logo" css:theme="a.navbar-brand" />

@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<object name="car_info" meta_type="Dexterity FTI" i18n:domain="plone"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <property name="title" i18n:translate="">car-info</property>
+ <property name="description"
+    i18n:translate="">contenttype for a new car</property>
+ <property name="icon_expr">string:${portal_url}/document_icon.png</property>
+ <property name="factory">car_info</property>
+ <property
+    name="add_view_expr">string:${folder_url}/++add++car_info</property>
+ <property name="link_target"></property>
+ <property name="immediate_view">view</property>
+ <property name="global_allow">True</property>
+ <property name="filter_content_types">True</property>
+ <property name="allowed_content_types"/>
+ <property name="allow_discussion">False</property>
+ <property name="default_view">carinfo_view</property>
+ <property name="view_methods">
+  <element value="view"/>
+ </property>
+ <property name="default_view_fallback">False</property>
+ <property name="add_permission">cmf.AddPortalContent</property>
+ <property name="klass">plone.dexterity.content.Container</property>
+ <property name="behaviors">
+  <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
+  <element value="plone.app.content.interfaces.INameFromTitle"/>
+ </property>
+ <property name="schema"></property>
+ <property
+    name="model_source">&lt;model xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
+    &lt;schema&gt;
+      &lt;field name="photo" type="plone.namedfile.field.NamedBlobImage"&gt;
+        &lt;description/&gt;
+        &lt;title&gt;Photo&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="marke" type="zope.schema.TextLine"&gt;
+        &lt;description&gt;Eintragen der Automarke&lt;/description&gt;
+        &lt;title&gt;Marke&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="model" type="zope.schema.TextLine"&gt;
+        &lt;description&gt;Eintragen des Automodels&lt;/description&gt;
+        &lt;title&gt;Model&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="modelvariante" type="zope.schema.TextLine"&gt;
+        &lt;description&gt;Eintragen der Modelvariante&lt;/description&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Modelvariante&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="fahrzeugtyp" type="zope.schema.Set"&gt;
+        &lt;description/&gt;
+        &lt;title&gt;Fahrzeugtyp&lt;/title&gt;
+        &lt;value_type type="zope.schema.Choice"&gt;
+          &lt;values&gt;
+            &lt;element&gt;Limousine&lt;/element&gt;
+            &lt;element&gt;Gel&amp;#228;ndewagen/Pickup&lt;/element&gt;
+            &lt;element&gt;Kleinwagen&lt;/element&gt;
+            &lt;element&gt;Cabrio/Roadster&lt;/element&gt;
+            &lt;element&gt;Kombi&lt;/element&gt;
+            &lt;element&gt;Sportwagen/Coup&amp;#233;&lt;/element&gt;
+            &lt;element&gt;Van/Minibus&lt;/element&gt;
+            &lt;element&gt;Andere&lt;/element&gt;
+          &lt;/values&gt;
+        &lt;/value_type&gt;
+      &lt;/field&gt;
+      &lt;field name="kraftstoffart" type="zope.schema.Set"&gt;
+        &lt;description&gt;Angabe der Kraftstoffart&lt;/description&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Kraftstoffart&lt;/title&gt;
+        &lt;value_type type="zope.schema.Choice"&gt;
+          &lt;values&gt;
+            &lt;element&gt;Benzin&lt;/element&gt;
+            &lt;element&gt;Diesel&lt;/element&gt;
+            &lt;element&gt;Elektro&lt;/element&gt;
+            &lt;element&gt;Ethanol&lt;/element&gt;
+            &lt;element&gt;Hybrid (Benzin/Elektro)&lt;/element&gt;
+            &lt;element&gt;Hybrid (Diesel/Elektro)&lt;/element&gt;
+            &lt;element&gt;Autogas&lt;/element&gt;
+            &lt;element&gt;Erdgas&lt;/element&gt;
+            &lt;element&gt;Wasserstoff&lt;/element&gt;
+            &lt;element&gt;Andere&lt;/element&gt;
+          &lt;/values&gt;
+        &lt;/value_type&gt;
+      &lt;/field&gt;
+      &lt;field name="zustand" type="zope.schema.Set"&gt;
+        &lt;description&gt;Zustand des angegebenen Autos&lt;/description&gt;
+        &lt;title&gt;Zustand&lt;/title&gt;
+        &lt;value_type type="zope.schema.Choice"&gt;
+          &lt;values&gt;
+            &lt;element&gt;Neuwagen&lt;/element&gt;
+            &lt;element&gt;Gebrauchtwagen&lt;/element&gt;
+            &lt;element&gt;Unfallfahrzeug&lt;/element&gt;
+          &lt;/values&gt;
+        &lt;/value_type&gt;
+      &lt;/field&gt;
+      &lt;field name="ausstattung" type="zope.schema.Set"&gt;
+        &lt;description&gt;Angabe der Ausstattung&lt;/description&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Innenausstattung&lt;/title&gt;
+        &lt;value_type type="zope.schema.Choice"&gt;
+          &lt;values&gt;
+            &lt;element&gt;Bluetooth&lt;/element&gt;
+            &lt;element&gt;Elektr. Seitenspiegel&lt;/element&gt;
+            &lt;element&gt;Isofix&lt;/element&gt;
+            &lt;element&gt;Regensensor&lt;/element&gt;
+            &lt;element&gt;Skisack&lt;/element&gt;
+            &lt;element&gt;Tuner/Radio&lt;/element&gt;
+            &lt;element&gt;Bordcomputer&lt;/element&gt;
+            &lt;element&gt;Elektr. Sitzeinstellung&lt;/element&gt;
+            &lt;element&gt;MP3-Schnittstelle&lt;/element&gt;
+            &lt;element&gt;Schiebedach&lt;/element&gt;
+            &lt;element&gt;Standheizung&lt;/element&gt;
+            &lt;element&gt;Zentralverriegelung&lt;/element&gt;
+            &lt;element&gt;CD-Spieler&lt;/element&gt;
+            &lt;element&gt;Freisprecheinrichtung&lt;/element&gt;
+            &lt;element&gt;Multifunktionslenkrad&lt;/element&gt;
+            &lt;element&gt;Servolenkung&lt;/element&gt;
+            &lt;element&gt;Start/Stopp-Automatik&lt;/element&gt;
+            &lt;element&gt;Elektr. Fensterheber&lt;/element&gt;
+            &lt;element&gt;Head-Up Display&lt;/element&gt;
+            &lt;element&gt;Navigationssystem&lt;/element&gt;
+            &lt;element&gt;Sitzheizung&lt;/element&gt;
+            &lt;element&gt;Tempomat&lt;/element&gt;
+          &lt;/values&gt;
+        &lt;/value_type&gt;
+      &lt;/field&gt;
+      &lt;field name="sicherheit" type="zope.schema.Set"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Sicherheit&lt;/title&gt;
+        &lt;value_type type="zope.schema.Choice"&gt;
+          &lt;values&gt;
+            &lt;element&gt;ABS&lt;/element&gt;
+            &lt;element&gt;Allradantrieb&lt;/element&gt;
+            &lt;element&gt;Elektr. Wegfahrstperre&lt;/element&gt;
+            &lt;element&gt;ESP&lt;/element&gt;
+            &lt;element&gt;Kurvenlicht&lt;/element&gt;
+            &lt;element&gt;Lichtsensor&lt;/element&gt;
+            &lt;element&gt;Nebelscheinwerfer&lt;/element&gt;
+            &lt;element&gt;Tagfahrlicht&lt;/element&gt;
+            &lt;element&gt;Traktionskontrolle&lt;/element&gt;
+            &lt;element&gt;Xenonscheinwerfer&lt;/element&gt;
+          &lt;/values&gt;
+        &lt;/value_type&gt;
+      &lt;/field&gt;
+      &lt;field name="sonstiges" type="zope.schema.Text"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Sonstiges&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="angebots_pdf" type="plone.namedfile.field.NamedBlobFile"&gt;
+        &lt;description&gt;Hochladen des Angebots als Pdf&lt;/description&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Angebots Pdf&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="schadstoffangabe" type="plone.namedfile.field.NamedBlobFile"&gt;
+        &lt;description&gt;Schadstoffangabe f&amp;#252;r Neuwagen&lt;/description&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Schadstoffangabe&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="fahrzeugpreis" type="zope.schema.TextLine"&gt;
+        &lt;description/&gt;
+        &lt;title&gt;Fahrzeugpreis&lt;/title&gt;
+      &lt;/field&gt;
+    &lt;/schema&gt;
+  &lt;/model&gt;</property>
+ <property name="model_file"></property>
+ <property name="schema_policy">dexterity</property>
+ <alias from="(Default)" to="(dynamic view)"/>
+ <alias from="edit" to="@@edit"/>
+ <alias from="sharing" to="@@sharing"/>
+ <alias from="view" to="(selected layout)"/>
+ <action title="View" action_id="view" category="object" condition_expr=""
+    description="" icon_expr="" link_target="" url_expr="string:${object_url}"
+    visible="True">
+  <permission value="View"/>
+ </action>
+ <action title="Edit" action_id="edit" category="object" condition_expr=""
+    description="" icon_expr="" link_target=""
+    url_expr="string:${object_url}/edit" visible="True">
+  <permission value="Modify portal content"/>
+ </action>
+</object>

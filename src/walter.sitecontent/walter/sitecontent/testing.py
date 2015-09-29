@@ -15,21 +15,21 @@ from plone.testing import z2
 import unittest2 as unittest
 
 
-class WalterSiteThemeLayer(PloneSandboxLayer):
+class WalterSitecontentLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
         """Set up Zope."""
         # Load ZCML
-        import walter.sitetheme
-        self.loadZCML(package=walter.sitetheme)
-        z2.installProduct(app, 'walter.sitetheme')
+        import walter.sitecontent
+        self.loadZCML(package=walter.sitecontent)
+        z2.installProduct(app, 'walter.sitecontent')
 
     def setUpPloneSite(self, portal):
         """Set up Plone."""
         # Install into Plone site using portal_setup
-        applyProfile(portal, 'walter.sitetheme:default')
+        applyProfile(portal, 'walter.sitecontent:default')
 
         # Login and create some test content
         setRoles(portal, TEST_USER_ID, ['Manager'])
@@ -43,14 +43,14 @@ class WalterSiteThemeLayer(PloneSandboxLayer):
 
     def tearDownZope(self, app):
         """Tear down Zope."""
-        z2.uninstallProduct(app, 'walter.sitetheme')
+        z2.uninstallProduct(app, 'walter.sitecontent')
 
 
-FIXTURE = WalterBuildoutLayer()
+FIXTURE = WalterSitecontentLayer()
 INTEGRATION_TESTING = IntegrationTesting(
-    bases=(FIXTURE,), name="WalterBuildoutLayer:Integration")
+    bases=(FIXTURE,), name="WalterSitecontentLayer:Integration")
 FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(FIXTURE,), name="WalterBuildoutLayer:Functional")
+    bases=(FIXTURE,), name="WalterSitecontentLayer:Functional")
 
 
 class IntegrationTestCase(unittest.TestCase):

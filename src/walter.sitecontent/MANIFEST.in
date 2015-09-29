@@ -1,0 +1,2 @@
+graft walter
+include *.cfg *.rst *.in
