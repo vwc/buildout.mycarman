@@ -24,15 +24,6 @@
   	<section class="container">
   		<div class="row">
    			<aside class="col-xs-12 col-sm-6 col-md-6">
-   				<h3>Automarke</h3>
-  				<div class="marke"
-  					tal:content="context/marke"></div>
-  				<h3>Automodel</h3>
-  				  <div class="model"
-  					tal:content="context/model"></div>
-          <h3>Modelvarante</h3>
-            <div class="modelvariante"
-              tal:content="context/modelvariante"></div>
           <h3>Fahrzeugtyp</h3>
             <div class="fahrzeugtyp"
               tal:condition="context/fahrzeugtyp"></div>
@@ -86,10 +77,8 @@
               tal:attributes="href string:${context/absolute_url}/@@download/angebot_pdf"
 >Angebot PDF</a>
             <h3>Schadstoffangabe</h3>
-            <a href="" class="schadstoffangabe"
-              tal:condition="string:${context/absolute_url}/@@download/schadstoffangabe"
-              tal:attributes="href string:${context/absolute_url}/@@download/schadstoffangabe"
->Schadstoffangabe PDF</a>
+        <img tal:condition="python:getattr(context, 'schadstoffangabe', None)"
+          tal:attributes="src string:${context/absolute_url}/@@images/schadstoffangabe/preview" />
 
   			</div>
   		</div>
