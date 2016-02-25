@@ -66,7 +66,7 @@
               </ul>
           <h3>Sonstiges</h3>
             <div class="sonstiges"
-              tal:condition="context/sonstiges"></div>
+              tal:content=" structure context/sonstiges"></div>
   			</aside>
   			<div class="col-xs-12 col-sm-6 col-md-6">
 				<img tal:condition="python:getattr(context, 'photo', None)"
