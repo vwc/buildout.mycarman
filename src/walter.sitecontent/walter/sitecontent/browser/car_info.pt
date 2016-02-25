@@ -73,9 +73,8 @@
 					tal:attributes="src string:${context/absolute_url}/@@images/photo/preview" />
             <h3>Fahrzeugdetails</h3>
             <a href="" class="angebot"
-              tal:condition="string:${context/absolute_url}/@@download/angebot_pdf"
-              tal:attributes="href string:${context/absolute_url}/@@download/angebot_pdf"
->Angebot PDF</a>
+              tal:condition="string:${context/absolute_url}/@@download/angebots_pdf"
+              tal:attributes="href string:${context/absolute_url}/@@download/angebots_pdf">Angebot PDF</a>
             <h3>Schadstoffangabe</h3>
         <img tal:condition="python:getattr(context, 'schadstoffangabe', None)"
           tal:attributes="src string:${context/absolute_url}/@@images/schadstoffangabe/preview" />
