@@ -16189,6 +16189,17 @@ img.image-left, img.image-right, .captioned img {
     background-color: none;
     border: none;
 }
+
+.tileImage img {
+    height: 20rem;
+    width: 20rem;
+}
+
+.tileImageNoFloat  img {
+    height: 20rem;
+    width: 20rem;
+}
+
 @media (max-width: 380px)
 {
     .section-special-cars .pictures .pic1,
