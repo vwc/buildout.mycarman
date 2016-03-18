@@ -4,6 +4,7 @@
     xmlns:z3c="http://namespaces.zope.org/z3c"
     i18n_domain="walter.sitecontent">
 
+  <browser:jbot directory="template_overrides" />
 
   <browser:page
       for="*"
@@ -12,4 +13,7 @@
       template="car_info.pt"
       permission="zope2.View"
       layer="..interfaces.IWalterSitecontentLayer" />
+
+
+
 </configure>
