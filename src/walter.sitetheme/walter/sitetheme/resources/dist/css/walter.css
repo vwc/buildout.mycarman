@@ -1476,7 +1476,7 @@ img.image-right a > img,
 .captioned img a > img
 {
     display: block;
-
+    background-color: none;
     max-width: 100%;
     height: auto;
 }
@@ -1500,7 +1500,7 @@ img.image-right a > img,
 
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: none;
 }
 .img-circle
 {
@@ -12435,7 +12435,7 @@ img.image-right,
 
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: none;
 }
 img.image-left > img,
 img.image-right > img,
@@ -16191,13 +16191,13 @@ img.image-left, img.image-right, .captioned img {
 }
 
 .tileImage img {
-    height: 20rem;
-    width: 20rem;
+    height: auto;
+    width: 100%;
 }
 
 .tileImageNoFloat  img {
-    height: 20rem;
-    width: 20rem;
+    height: auto;
+    width: 100%;
 }
 
 @media (max-width: 380px)
