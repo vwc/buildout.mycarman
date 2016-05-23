@@ -16200,6 +16200,9 @@ img.image-left, img.image-right, .captioned img {
     width: 100%;
 }
 
+.description {
+    font-size: 2.5rem;
+}
 @media (max-width: 380px)
 {
     .section-special-cars .pictures .pic1,
