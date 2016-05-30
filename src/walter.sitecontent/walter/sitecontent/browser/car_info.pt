@@ -78,8 +78,8 @@
             <div class="hauptuntersuchung"
               tal:content=" structure context/hauptuntersuchung"></div>
           <h3>Vorbesitzer</h3>
-            <div class="hauptuntersuchung"
-              tal:content=" structure context/hauptuntersuchung"></div>
+            <div class="vorbesitzer"
+              tal:content=" structure context/vorbesitzer"></div>
   			</aside>
   			<div class="col-xs-12 col-sm-6 col-md-6">
 				<img tal:condition="python:getattr(context, 'photo', None)"
